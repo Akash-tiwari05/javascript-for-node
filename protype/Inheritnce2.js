@@ -16,7 +16,7 @@ function Event(dateOfEvent) {
 
 Event.prototype.bookEvent = function() {
     console.log("Event Booked");
-};
+}
 
 function Movie(name) {
     Event.call(this, "2024-07-01")//inherit properties
