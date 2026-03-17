@@ -16,7 +16,7 @@ function download(url, callback) {
     console.log("Downloading started...");
     setTimeout(() => {
         console.log("Content downloaded from:", url);
-        callback("fileData"); // pass data to next step
+        callback?.("fileData"); // pass data to next step
     }, 3000);
 }
 
@@ -25,7 +25,7 @@ function process(data, callback) {
     console.log("Processing data...");
     setTimeout(() => {
         console.log("Processing completed",data);
-        callback("processedFile"); // pass processed file
+        callback?.("processedFile"); // pass processed file
     }, 3000);
 }
 
@@ -34,7 +34,7 @@ function upload(file, callback) {
     console.log("Uploading file...",file);
     setTimeout(() => {
         console.log("Upload successful",file);
-        callback();
+        callback?.();//optional chaining operator
     }, 3000);
 }
 
